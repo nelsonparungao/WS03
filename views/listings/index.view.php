@@ -1,25 +1,17 @@
 <?php
 loadPartial('head');
 loadPartial('navbar');
-loadPartial('showcase');
 ?>
 
-<section class="top-banner">
-    <div class="container mx-auto max-w-6xl px-4">
-        <h2>Available Opportunities</h2>
-        <p>
-            Explore job openings from different categories and companies.
-        </p>
-    </div>
-</section>
+
 
 <section class="jobs-section">
     <div class="container mx-auto max-w-6xl px-4">
         <div class="jobs-section-header">
-            <span class="jobs-section-badge">Latest Jobs</span>
-            <h2 class="jobs-section-title">Recent Listings</h2>
+            <span class="jobs-section-badge">All Opportunities</span>
+            <h1 class="jobs-section-title">Browse All Jobs</h1>
             <p class="jobs-section-subtitle">
-                Here are some of the recently posted job opportunities.
+                Explore available openings across engineering, design, marketing, and data roles.
             </p>
         </div>
 
@@ -30,8 +22,12 @@ loadPartial('showcase');
                         <span class="job-card-category">Engineering</span>
                         <span class="job-badge">Local</span>
                     </div>
+
                     <h3 class="job-card-title">Software Engineer</h3>
-                    <p class="job-card-description">Develop software applications and support technical projects.</p>
+                    <p class="job-card-description">
+                        We are seeking a skilled software engineer to develop high-quality software solutions.
+                    </p>
+
                     <div class="job-card-meta">
                         <div class="job-meta-row">
                             <span class="job-meta-label">Salary</span>
@@ -41,7 +37,15 @@ loadPartial('showcase');
                             <span class="job-meta-label">Location</span>
                             <span class="job-location">New York</span>
                         </div>
+                        <div class="job-meta-row job-tags-row">
+                            <span class="job-meta-label">Tags</span>
+                            <div class="job-tags">
+                                <span class="job-tag">Development</span>
+                                <span class="job-tag">Coding</span>
+                            </div>
+                        </div>
                     </div>
+
                     <a href="#" class="job-details-btn">View Details</a>
                 </div>
             </article>
@@ -52,8 +56,12 @@ loadPartial('showcase');
                         <span class="job-card-category">Marketing</span>
                         <span class="job-badge remote">Remote</span>
                     </div>
+
                     <h3 class="job-card-title">Marketing Specialist</h3>
-                    <p class="job-card-description">Assist in planning and managing company marketing activities.</p>
+                    <p class="job-card-description">
+                        We are looking for a Marketing Specialist to create and manage marketing campaigns.
+                    </p>
+
                     <div class="job-card-meta">
                         <div class="job-meta-row">
                             <span class="job-meta-label">Salary</span>
@@ -63,7 +71,15 @@ loadPartial('showcase');
                             <span class="job-meta-label">Location</span>
                             <span class="job-location">San Francisco</span>
                         </div>
+                        <div class="job-meta-row job-tags-row">
+                            <span class="job-meta-label">Tags</span>
+                            <div class="job-tags">
+                                <span class="job-tag">Marketing</span>
+                                <span class="job-tag">Advertising</span>
+                            </div>
+                        </div>
                     </div>
+
                     <a href="#" class="job-details-btn">View Details</a>
                 </div>
             </article>
@@ -71,11 +87,15 @@ loadPartial('showcase');
             <article class="job-card">
                 <div class="job-card-content">
                     <div class="job-card-top">
-                        <span class="job-card-category">Web</span>
+                        <span class="job-card-category">Development</span>
                         <span class="job-badge">Local</span>
                     </div>
+
                     <h3 class="job-card-title">Web Developer</h3>
-                    <p class="job-card-description">Build and maintain websites and business web applications.</p>
+                    <p class="job-card-description">
+                        Join our team as a Web Developer and create amazing web applications.
+                    </p>
+
                     <div class="job-card-meta">
                         <div class="job-meta-row">
                             <span class="job-meta-label">Salary</span>
@@ -85,7 +105,15 @@ loadPartial('showcase');
                             <span class="job-meta-label">Location</span>
                             <span class="job-location">Los Angeles</span>
                         </div>
+                        <div class="job-meta-row job-tags-row">
+                            <span class="job-meta-label">Tags</span>
+                            <div class="job-tags">
+                                <span class="job-tag">Web Development</span>
+                                <span class="job-tag">Programming</span>
+                            </div>
+                        </div>
                     </div>
+
                     <a href="#" class="job-details-btn">View Details</a>
                 </div>
             </article>
@@ -192,29 +220,19 @@ loadPartial('showcase');
                 </div>
             </article>
         </div>
-
-        <div class="jobs-footer-link-wrap">
-            <a href="/Project/public/listings" class="jobs-footer-link">
-                <span>Show All Jobs</span>
-                <i class="fa fa-arrow-right"></i>
+        <div class="back-link-wrap">
+            <a href="/Project/public/" class="back-link">
+                <i class="fa fa-arrow-left"></i>
+                <span>Back to Home</span>
             </a>
         </div>
     </div>
+
+
+
 </section>
 
-<section class="container mx-auto max-w-6xl px-4 mb-16">
-    <div class="cta-banner">
-        <div>
-            <h2>Post a Job Opening</h2>
-            <p>Share your job listing and reach more applicants.</p>
-        </div>
 
-        <a href="/Project/public/listings/create" class="btn btn-primary">
-            <i class="fa fa-edit"></i>
-            Post a Job
-        </a>
-    </div>
-</section>
 
 <?php
 loadPartial('footer');
