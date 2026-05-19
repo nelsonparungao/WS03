@@ -1,8 +1,21 @@
 <?php
+// Home route
+$router->get('/', 'HomeController@index');
 
-$router->get('/', 'controllers/home.php');
-$router->get('/listings', 'controllers/listings/index.php');
-$router->get('/listings/create', 'controllers/listings/create.php');
-// Do NOT add routes for login, register, or listing details - they will 404 naturally
+// Listing routes
+$router->get('/listings', 'ListingController@index');
+$router->get('/listings/search', 'ListingController@search');
+$router->get('/listings/create', 'ListingController@create', ['auth']);
+$router->post('/listings', 'ListingController@store', ['auth']);
+$router->get('/listings/edit/{id}', 'ListingController@edit', ['auth']);
+$router->put('/listings/{id}', 'ListingController@update', ['auth']);
+$router->delete('/listings/{id}', 'ListingController@destroy', ['auth']);
+$router->get('/listings/{id}', 'ListingController@show');
 
+// User routes
+$router->get('/register', 'UserController@create', ['guest']);
+$router->post('/register', 'UserController@store', ['guest']);
+$router->get('/login', 'UserController@login', ['guest']);
+$router->post('/login', 'UserController@authenticate', ['guest']);
+$router->post('/logout', 'UserController@logout', ['auth']);
 ?>

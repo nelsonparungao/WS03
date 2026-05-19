@@ -1,0 +1,17 @@
+{
+    "name": "nelsonparungao/ws03-php",
+    "description": "Job Listing PHP Project",
+    "authors": [
+        {
+            "name": "Nelson Parungao",
+            "email": "nelsonparungao03@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "framework/",
+            "Framework\\Middleware\\": "framework/Middleware/",
+            "App\\": "app/"
+        }
+    }
+}

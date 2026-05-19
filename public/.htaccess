@@ -1,5 +1,10 @@
 RewriteEngine On
+RewriteBase /WS03/
 
+# Route all requests to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [L,QSA]    
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Disable directory listing
+Options -Indexes
